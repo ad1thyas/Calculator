@@ -1,0 +1,91 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--background-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: var(--calculator-bg);
+    border-radius: 15px;
+    padding: 15px;
+}
+
+h1 {
+    text-align: center;
+    color: var(--display-text);
+    font-size: 1.8em;
+    margin: 10px 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+input[type="text"] {
+    width: 100%;
+    height: 80px;
+    border: none;
+    text-align: right;
+    padding: 15px;
+    font-size: 2.5em;
+    background-color: var(--display-bg);
+    color: var(--display-text);
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+input[type="button"] {
+    width: 65px;
+    height: 65px;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    outline: none;
+    border-radius: 50%;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for numbers and dot */
+input[value*="7"], input[value*="8"], input[value*="9"],
+input[value*="4"], input[value*="5"], input[value*="6"],
+input[value*="1"], input[value*="2"], input[value*="3"],
+input[value*="0"], input[value*="."] {
+    background-color: #5d6d7e;
+    color: var(--button-number);
+}
+
+/* Styles for operators and clear button */
+input[value*="+"], input[value*="-"], input[value*="*"], input[value*="/"], input[value*="C"] {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* Style for the equals button */
+input[value*="="] {
+    background-color: #27ae60;
+    color: white;
+}
+
+/* Hover effects */
+input[type="button"]:hover {
+    background-color: var(--button-hover);
+    transform: translateY(-2px);
+}
+
+input[value*="="]:hover {
+    background-color: #2ecc71;
+}
+
+/* Active (click) effect */
+input[type="button"]:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
